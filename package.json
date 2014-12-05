@@ -1,0 +1,33 @@
+{
+  "name": "postcss-pseudoelements",
+  "version": "1.0.0",
+  "description": "PostCSS plugin to add single-colon CSS 2.1 syntax pseudo selectors (i.e. :before)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/axa-ch/postcss-pseudoelements"
+  },
+  "keywords": [
+    "postcss",
+    "pseudoelements",
+    "before",
+    "after"
+  ],
+  "author": "Sven Tschui <sven.tschui@axa.ch>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axa-ch/postcss-pseudoelements/issues"
+  },
+  "homepage": "https://github.com/axa-ch/postcss-pseudoelements",
+  "dependencies": {
+    "minimatch": "^2.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.0.1",
+    "postcss": "^3.0.5",
+    "should": "^4.3.0"
+  }
+}
