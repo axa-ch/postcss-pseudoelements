@@ -6,7 +6,7 @@
 var pe = require('postcss-pseudoelements');
 var postcss = require('postcss');
 
-var processor = postcss(pe({ selectors: ['before', 'after']}));
+var processor = postcss(pe(OPTIONS));
 
 console.log(processor.process('a:before {}').css) // outputs: a:before {}
 console.log(processor.process('a::before {}').css) // outputs: a:before {}
