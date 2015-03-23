@@ -8,10 +8,10 @@ var postcss = require('postcss');
 
 var processor = postcss(pe({ selectors: ['before', 'after']}));
 
-console.log(processor.process('a:before {}').css) // outputs: a:before, a::before {}
-console.log(processor.process('a::before {}').css) // outputs: a::before, a:before {}
+console.log(processor.process('a:before {}').css) // outputs: a:before {}
+console.log(processor.process('a::before {}').css) // outputs: a:before {}
 ```
 
 ## options
 
-`selectors`: Array of pseudo-element selectors to rewrite with single and double colons. Defaults to `['before','after']` 
+`selectors`: Array of pseudo-element selectors to rewrite with single and double colons. Note that these values will be used in a regexp without escaping. Defaults to `['before','after']`
