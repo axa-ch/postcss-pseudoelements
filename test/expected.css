@@ -30,3 +30,19 @@ foo:before bar:after {
 :after {
   display: block;
 }
+
+:first-line {
+  display: block;
+}
+
+:first-letter {
+  display: block;
+}
+
+:first-line {
+  display: block;
+}
+
+:first-letter {
+  display: block;
+}
