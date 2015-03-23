@@ -9,18 +9,11 @@ function plugin(options) {
     'after'
   ]
 
+  var replacements = new RegExp('::(' + selectors.join('|') + ')', 'gi');
+
   return function(css) {
     css.eachRule(function(rule) {
-
-      selectors.forEach(function(selector) {
-        rule.selectors.forEach(function(selector) {
-
-          rule.selector = selector.replace(new RegExp('::(' + selectors.join('|') + ')', 'gi'), ':$1');
-
-        });
-
-      });
-
+      rule.selector = rule.selector.replace(replacements, ':$1');
     });
   }
 }
