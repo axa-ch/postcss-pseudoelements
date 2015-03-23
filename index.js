@@ -6,7 +6,9 @@ function plugin(options) {
 
   var selectors = options.selectors || [
     'before',
-    'after'
+    'after',
+    'first-letter',
+    'first-line'
   ]
 
   return function(css) {
