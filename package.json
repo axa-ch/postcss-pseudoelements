@@ -22,12 +22,9 @@
     "url": "https://github.com/axa-ch/postcss-pseudoelements/issues"
   },
   "homepage": "https://github.com/axa-ch/postcss-pseudoelements",
-  "dependencies": {
-    "minimatch": "^2.0.1"
-  },
   "devDependencies": {
     "mocha": "^2.0.1",
-    "postcss": "^3.0.5",
-    "should": "^4.3.0"
+    "postcss": ">=3.0.5",
+    "should": "^5.0.0"
   }
 }
