@@ -1,3 +1,8 @@
+# 2.1.1
+
+* Remove unused runtime dependency to minimatch
+* Update postcss in test to >=3.0.5
+
 ## 2.1.0
 
 * Add first-letter and first-line to the default value of the selectors option
