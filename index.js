@@ -1,7 +1,8 @@
 
-module.exports = plugin;
+var postcss = require('postcss');
 
-function plugin(options) {
+module.exports = postcss.plugin('pseudoelements', function(options) {
+
   options = options || {};
 
   var selectors = options.selectors || [
@@ -18,4 +19,4 @@ function plugin(options) {
       rule.selector = rule.selector.replace(replacements, ':$1');
     });
   }
-}
+});
