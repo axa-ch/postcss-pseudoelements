@@ -15,7 +15,7 @@ module.exports = postcss.plugin('pseudoelements', function(options) {
   var replacements = new RegExp('::(' + selectors.join('|') + ')', 'gi');
 
   return function(css) {
-    css.eachRule(function(rule) {
+    css.walkRules(function(rule) {
       rule.selector = rule.selector.replace(replacements, ':$1');
     });
   }

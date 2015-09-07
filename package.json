@@ -28,6 +28,6 @@
     "should": "^5.0.0"
   },
   "dependencies": {
-    "postcss": "^4.1.11"
+    "postcss": "^5.0.4"
   }
 }
