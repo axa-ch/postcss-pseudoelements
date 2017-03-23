@@ -4,12 +4,12 @@ postcss helper for pseudo element colons, it handles double -> single and single
 
 ## Usage
 
-### Double to Single
+### Double to Single (default)
 ```javascript
 var pe = require('postcss-pseudoelements');
 var postcss = require('postcss');
 var options = {
-	single: true,
+	single: true, // default
 	selectors: ['before'],
 };
 
