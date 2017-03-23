@@ -10,7 +10,7 @@ var pe = require('postcss-pseudoelements');
 var postcss = require('postcss');
 var options = {
 	single: true, // default
-	selectors: ['before'],
+	selectors: ['before','after','first-letter','first-line'], // default
 };
 
 var processor = postcss(pe(options));
@@ -26,7 +26,7 @@ var pe = require('postcss-pseudoelements');
 var postcss = require('postcss');
 var options = {
 	single: false,
-	selectors: ['before'],
+	selectors: ['before','after','first-letter','first-line'], // default
 };
 
 var processor = postcss(pe(options));
