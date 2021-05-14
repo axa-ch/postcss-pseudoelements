@@ -23,11 +23,15 @@
     "url": "https://github.com/axa-ch/postcss-pseudoelements/issues"
   },
   "homepage": "https://github.com/axa-ch/postcss-pseudoelements",
-  "devDependencies": {
-    "mocha": "^2.0.1",
-    "should": "^5.0.0"
+  "engines": {
+    "node": ">= 10"
   },
-  "dependencies": {
-    "postcss": "^6.0.0"
+  "devDependencies": {
+    "mocha": "^8.4.0",
+    "should": "^13.2.3",
+    "postcss": "^8.2.15"
+  },
+  "peerDependencies": {
+    "postcss": "^8.2.15"
   }
 }
