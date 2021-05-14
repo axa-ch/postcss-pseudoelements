@@ -1,22 +1,18 @@
-var postcss = require('postcss');
-
-module.exports = postcss.plugin('pseudoelements', (options) => {
-
-  options = options || { single: true };
-
-  var selectors = options.selectors || [
+module.exports = (options = { single: true }) => {
+  const selectors = options.selectors || [
     'before',
     'after',
     'first-letter',
     'first-line'
   ]
 
-  var replacements = new RegExp(':{1,}(' + selectors.join('|') + ')', 'gi');
-	var replaceWith = options.single ? ':$1' : '::$1'
+  const replacements = new RegExp(':{1,}(' + selectors.join('|') + ')', 'gi');
+	const replaceWith = options.single ? ':$1' : '::$1'
 
-  return (css) => {
-    css.walkRules((rule) => {
+  return {
+    postcssPlugin: 'pseudoelements',
+    Rule(rule) {
       rule.selector = rule.selector.replace(replacements, replaceWith);
-  	});
+    }
   };
-});
+};
